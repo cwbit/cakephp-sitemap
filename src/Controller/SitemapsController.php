@@ -17,7 +17,7 @@ class SitemapsController extends AppController
       'priority' => true,
       'changefreq' => true,
     ];
-    
+
     public $_defaultConfig = [
         'loc' => 'url',
         'lastmod' => 'updated',
@@ -44,6 +44,8 @@ class SitemapsController extends AppController
 
     public function display()
     {
+        $this->viewBuilder()->layout('Sitemap.sitemap');
+
         $config = Configure::read('Sitemap');
 
         $pages = [];
