@@ -1,12 +1,12 @@
 <?php
-    use Cake\Routing\Router;
+  use Cake\Routing\Router;
 
-    # allow the plugin to parse xml
-    Router::extensions('xml');
-
-    # connect /sitemap
-    Router::connect('/sitemap', [
-        'plugin' => 'Sitemap',
-        'controller' => 'Sitemaps',
-        'action' => 'display'
-        ]);
+  # enable /sitemap and /sitemap.xml
+  Router::scope('/', function($routes){
+    $routes->extensions(['xml']);
+    $routes->connect('/sitemap', [
+      'plugin' => 'Sitemap',
+      'controller' => 'Sitemaps',
+      'action' => 'display'
+    ]);
+  });

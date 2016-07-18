@@ -90,5 +90,6 @@ class SitemapsController extends AppController
         endforeach;
 
         $this->set(compact('pages'));
+        $this->set('_serialize', false);
     }
 }
