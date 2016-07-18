@@ -2,6 +2,7 @@
     "name": "cwbit/cakephp-sitemap",
     "description": "Sitemap Generator plugin for CakePHP 3.x apps",
     "type": "cakephp-plugin",
+    "license" : "MIT",
     "require": {
         "php": ">=5.4.16",
         "cakephp/cakephp": "~3.0"
